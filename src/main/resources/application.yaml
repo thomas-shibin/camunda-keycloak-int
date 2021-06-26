@@ -1,5 +1,17 @@
-spring.datasource.url: jdbc:h2:file:./camunda-h2-database
+server.port: 8070
 
 camunda.bpm.admin-user:
   id: admin
   password: changeme
+
+spring.datasource:
+  url: jdbc:postgresql://localhost:5444/camunda-db
+  username: admin
+  password: changeme
+  driverClassName: org.postgresql.Driver
+  type: com.zaxxer.hikari.HikariDataSource
+  connectionTimeout: 30000
+  idleTimeout: 600000
+  maximumPoolSize: 10
+  validationTimeout: 5000
+
